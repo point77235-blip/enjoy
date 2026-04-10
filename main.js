@@ -14,18 +14,27 @@ class BabyFoodRecommendation extends HTMLElement {
     connectedCallback() {
         const age = this.getAttribute('age');
         const recommendation = this.getRecommendation(age);
+        this.render(age, recommendation);
+    }
+
+    render(age, recommendation) {
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: block;
                     margin-top: 1rem;
                     padding: 1rem;
-                    border: 1px solid #e83e8c;
+                    border: 1px solid var(--primary-color, #e83e8c);
                     border-radius: 4px;
-                    background-color: #fdf4f6;
+                    background-color: var(--secondary-bg-color, #fdf4f6);
+                    color: var(--text-color, #333);
                 }
                 h3 {
-                    color: #e83e8c;
+                    color: var(--primary-color, #e83e8c);
+                    margin-top: 0;
+                }
+                p {
+                    margin-bottom: 0;
                 }
             </style>
             <h3>${age}개월 추천 식단</h3>
@@ -50,8 +59,26 @@ class BabyFoodRecommendation extends HTMLElement {
 
 customElements.define('baby-food-recommendation', BabyFoodRecommendation);
 
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.textContent = '라이트 모드';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    themeToggle.textContent = isDark ? '라이트 모드' : '다크 모드';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
 document.getElementById('recommend-button').addEventListener('click', () => {
-    const age = document.getElementById('age-input').value;
+    const ageInput = document.getElementById('age-input');
+    const age = ageInput.value;
     const container = document.getElementById('recommendation-container');
     container.innerHTML = ''; // Clear previous recommendations
     if (age) {
@@ -60,3 +87,4 @@ document.getElementById('recommend-button').addEventListener('click', () => {
         container.appendChild(recommendationElement);
     }
 });
+
