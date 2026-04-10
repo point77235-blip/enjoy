@@ -5,69 +5,92 @@ const weeklyFoodData = {
         days: {
             "월": {
                 breakfast: { 
-                    name: "소고기 청경채 무른밥", 
-                    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", 
-                    recipe: { ingredients: ["불린 쌀 50g", "소고기 안심 30g", "청경채 15g"], steps: ["1. 소고기는 핏물을 빼고 삶아서 다집니다.", "2. 청경채는 데친 후 잘게 다집니다.", "3. 냄비에 쌀과 재료를 넣고 푹 끓입니다."] }, 
-                    alternatives: [{ name: "소고기 브로콜리 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", recipe: { ingredients: ["쌀 50g", "소고기 30g", "브로콜리 20g"], steps: ["1. 소고기와 브로콜리를 다집니다.", "2. 쌀과 함께 끓여 죽을 만듭니다."] } }] 
+                    name: "소고기 청경채 덮밥", 
+                    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80", 
+                    recipe: { 
+                        ingredients: ["다진 소고기 30g", "청경채 15g", "양파 10g", "전분물 1큰술", "진밥 100g"], 
+                        steps: ["1. 소고기와 다진 양파, 청경채를 팬에 볶습니다.", "2. 재료가 잠길 정도로 물을 붓고 끓입니다.", "3. 전분물을 풀어 걸쭉하게 만든 뒤 밥 위에 얹어줍니다."] 
+                    }, 
+                    alternatives: [{ name: "소고기 애호박 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }] 
                 },
                 lunch: { 
-                    name: "닭고기 고구마 진밥", 
-                    image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", 
-                    recipe: { ingredients: ["불린 쌀 50g", "닭가슴살 30g", "고구마 20g"], steps: ["1. 닭가슴살은 삶아 결대로 찢어 다집니다.", "2. 고구마는 쪄서 으깹니다.", "3. 쌀과 함께 재료를 넣고 끓입니다."] }, 
-                    alternatives: [{ name: "닭고기 당근 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", recipe: { ingredients: ["쌀 50g", "닭고기 30g", "당근 15g"], steps: ["1. 모든 재료를 다져서 푹 익힙니다."] } }] 
+                    name: "닭고기 야채 간장조림", 
+                    image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80", 
+                    recipe: { 
+                        ingredients: ["닭안심 30g", "당근 10g", "양파 10g", "아기 간장 0.5작은술", "배즙 1큰술"], 
+                        steps: ["1. 닭고기와 야채를 아이 한입 크기로 썹니다.", "2. 냄비에 재료와 물, 아기 간장, 배즙을 넣습니다.", "3. 고기가 익고 국물이 자작해질 때까지 졸입니다."] 
+                    }, 
+                    alternatives: [{ name: "닭고기 감자 조림", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" }] 
                 },
                 snack: { 
-                    name: "찐 단호박 조각", 
-                    image: "https://images.unsplash.com/photo-1506807803488-8eafc15316c7?auto=format&fit=crop&w=300&q=80",
-                    recipe: { ingredients: ["단호박 50g"], steps: ["1. 단호박 씨를 제거하고 껍질을 벗깁니다.", "2. 찜기에 15분간 쪄서 먹기 좋게 자릅니다."] },
-                    alternatives: [{ name: "사과 매쉬", image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=300&q=80" }]
+                    name: "바나나 퓨레", 
+                    image: "https://images.unsplash.com/photo-1481349579423-ba96c36e6b9a?auto=format&fit=crop&w=500&q=80",
+                    recipe: { ingredients: ["잘 익은 바나나 1개"], steps: ["1. 바나나 껍질을 벗기고 양 끝을 제거합니다.", "2. 숟가락으로 부드럽게 으깨어 제공합니다."] },
+                    alternatives: [{ name: "사과 퓨레", image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=500&q=80" }]
                 },
                 dinner: { 
-                    name: "흰살생선 야채 무른밥", 
-                    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80",
-                    recipe: { ingredients: ["대구살 30g", "애호박 15g", "쌀 50g"], steps: ["1. 생선살 가시를 완벽히 제거합니다.", "2. 야채와 함께 쌀을 넣고 끓입니다."] },
-                    alternatives: [{ name: "새우 살 야채죽", image: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=300&q=80" }]
+                    name: "순두부 달걀탕 & 진밥", 
+                    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80",
+                    recipe: { 
+                        ingredients: ["순두부 50g", "달걀 1개", "멸치 육수 150ml"], 
+                        steps: ["1. 육수에 순두부를 큼직하게 떼어 넣습니다.", "2. 국물이 끓어오르면 달걀물을 풀어 넣습니다.", "3. 부드럽게 익혀 밥과 함께 제공합니다."] 
+                    },
+                    alternatives: [{ name: "대구살 채소국", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }]
                 }
             },
             "화": {
-                breakfast: { name: "닭고기 버섯 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 무 무른밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] },
-                lunch: { name: "소고기 배 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "한우 양배추 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] },
-                snack: { name: "바나나 퓨레", image: "https://images.unsplash.com/photo-1481349579423-ba96c36e6b9a?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "아기 치즈", image: "https://images.unsplash.com/photo-1486297678162-ad2a19b05844?auto=format&fit=crop&w=300&q=80"}] },
-                dinner: { name: "계란 노른자 채소죽", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "두부 야채 무른밥", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=300&q=80"}] }
+                breakfast: { name: "감자계란국 & 무른밥", image: "https://images.unsplash.com/photo-1518977676601-b53f02ac6d31?auto=format&fit=crop&w=500&q=80", recipe: { ingredients: ["감자 1개", "달걀 1개", "다시마 육수 200ml"], steps: ["1. 육수에 작게 썬 감자를 넣고 익힙니다.", "2. 감자가 익으면 푼 달걀을 줄을 치듯 넣습니다.", "3. 한소끔 끓여 마무리합니다."] }, alternatives: [{name: "배추 된장국", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80"}] },
+                lunch: { name: "애호박 느타리버섯볶음", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80", recipe: { ingredients: ["애호박 20g", "느타리버섯 15g", "들기름 1작은술"], steps: ["1. 애호박은 채썰고 버섯은 잘게 찢습니다.", "2. 팬에 들기름을 두르고 채소를 볶습니다.", "3. 물을 조금 넣어 증기로 부드럽게 익힙니다."] }, alternatives: [{name: "가지 볶음", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80"}] },
+                snack: { name: "아기 치즈 & 고구마", image: "https://images.unsplash.com/photo-1486297678162-ad2a19b05844?auto=format&fit=crop&w=500&q=80", alternatives: [{name: "찐 밤", image: "https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=500&q=80"}] },
+                dinner: { name: "소고기 애호박전", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80", recipe: { ingredients: ["애호박 1/4개", "다진 소고기 20g", "달걀 1개", "밀가루 약간"], steps: ["1. 다진 소고기와 애호박을 섞어 반죽을 만듭니다.", "2. 달걀물을 입혀 팬에 노릇하게 구워냅니다."] }, alternatives: [{name: "두부 스테이크", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80"}] }
             },
-            "수": { 
-                breakfast: { name: "한우 두부 무른밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭가슴살 감자 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, 
-                lunch: { name: "대구살 애호박 진밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "연어 채소 죽", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80"}] }, 
-                snack: { name: "아기 요거트", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "삶은 감자", image: "https://images.unsplash.com/photo-1518977676601-b53f02ac6d31?auto=format&fit=crop&w=300&q=80"}] }, 
-                dinner: { name: "닭안심 감자 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "야채 계란죽", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] } 
-            },
-            "목": { breakfast: { name: "소고기 당근 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭안심 고구마 죽", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "닭가슴살 양배추 죽", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 시금치 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "사과 조각", image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "배 퓨레", image: "https://images.unsplash.com/photo-1541491008689-b5d3c6615e2e?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "흰살생선 배추 무른밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 무 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] } },
-            "금": { breakfast: { name: "닭고기 브로콜리 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 버섯 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "소고기 단호박 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭고기 고구마 진밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "고구마 매쉬", image: "https://images.unsplash.com/photo-1596040309792-953329598f44?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "찐 밤", image: "https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "계란 야채 진밥", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "흰살생선 야채 진밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80"}] } },
-            "토": { breakfast: { name: "한우 표고버섯 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭안심 양배추 죽", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "대구살 시금치 진밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 비트 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "치즈 조각", image: "https://images.unsplash.com/photo-1486297678162-ad2a19b05844?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "식빵 껍질 제거 조각", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "닭고기 무 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "계란 단호박 죽", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] } },
-            "일": { breakfast: { name: "소고기 청경채 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭가슴살 고구마 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "닭안심 고구마 무른밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 브로콜리 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "사과 퓨레", image: "https://images.unsplash.com/photo-1541491008689-b5d3c6615e2e?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "요거트", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "흰살생선 야채 진밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "계란 감자 죽", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] } }
+            "수": { breakfast: { name: "아기 배추 된장국", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "닭가슴살 채소 덮밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "제철 과일 퓨레", image: "https://images.unsplash.com/photo-1541491008689-b5d3c6615e2e?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "한우 표고버섯 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" } },
+            "목": { breakfast: { name: "순두부 채소국", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "대구살 조림 & 진밥", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "찐 단호박 조각", image: "https://images.unsplash.com/photo-1506807803488-8eafc15316c7?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "소고기 뭇국 & 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" } },
+            "금": { breakfast: { name: "달걀 채소 죽", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "닭고기 브로콜리 진밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "요거트 & 블루베리", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "한우 애호박 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" } },
+            "토": { breakfast: { name: "전복 무른밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "새우 살 야채 진밥", image: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=500&q=80" }, snack: { name: "찐 고구마 조각", image: "https://images.unsplash.com/photo-1596040309792-953329598f44?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "닭고기 무 진밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" } },
+            "일": { breakfast: { name: "소고기 청경채 진밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "대구살 채소 죽", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "사과 매쉬", image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "닭안심 감자 진밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" } }
         }
     },
     "13-18": {
         title: "유아식 초기 (진밥과 반찬)",
-        tip: "서서히 어른 음식과 비슷하게 진행하되, 간은 아주 약하게(저염식) 해주세요.",
+        tip: "자기주도 식사가 시작되는 시기입니다. 다양한 식재료의 맛과 질감을 경험하게 해주세요.",
         days: {
             "월": {
-                breakfast: { name: "야채 계란 진밥 & 미역국", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80", recipe: { ingredients: ["진밥 100g", "계란 1개", "다진 야채 20g", "건미역 소량"], steps: ["1. 야채를 볶다가 계란을 넣어 스크램블 합니다.", "2. 진밥과 섞어줍니다.", "3. 불린 미역으로 맑은 국을 끓입니다."] }, alternatives: [{ name: "소고기 야채 덮밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80" }] },
-                lunch: { name: "닭다리살 간장구이 & 두부부침", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "수제 미트볼 & 잡곡밥", image: "https://images.unsplash.com/photo-1529042410759-ad81203b1b19?auto=format&fit=crop&w=300&q=80"}] },
-                snack: { name: "우유 & 고구마 말랭이", image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "바나나 쉐이크", image: "https://images.unsplash.com/photo-1481349579423-ba96c36e6b9a?auto=format&fit=crop&w=300&q=80"}] },
-                dinner: { name: "가시 제거한 갈치구이 & 나물무침", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 뭇국 & 멸치볶음", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }
+                breakfast: { 
+                    name: "야채 계란 볶음밥 & 감자국", 
+                    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80", 
+                    recipe: { ingredients: ["밥 100g", "계란 1개", "감자 1/4개", "다진 채소 20g"], steps: ["1. 육수에 작게 썬 감자를 넣고 감자국을 끓입니다.", "2. 팬에 채소와 밥을 볶다가 계란을 넣어 볶음밥을 만듭니다."] }, 
+                    alternatives: [{ name: "소고기 볶음밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }] 
+                },
+                lunch: { 
+                    name: "순두부 달걀탕 & 닭고기 구이", 
+                    image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80", 
+                    recipe: { ingredients: ["순두부 50g", "달걀 1개", "닭다리살 40g"], steps: ["1. 순두부와 달걀을 넣어 부드러운 탕을 끓입니다.", "2. 닭고기는 작게 썰어 팬에 노릇하게 굽습니다."] }, 
+                    alternatives: [{ name: "미역국 & 생선구이", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }] 
+                },
+                snack: { 
+                    name: "우유 & 제철 과일", 
+                    image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=500&q=80",
+                    alternatives: [{ name: "수제 요거트", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" }]
+                },
+                dinner: { 
+                    name: "한우 불고기 & 백김치", 
+                    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80",
+                    recipe: { ingredients: ["다진 소고기 40g", "양파 10g", "배즙 1큰술", "아기 간장 0.5작은술"], steps: ["1. 소고기에 양파와 배즙, 간장으로 밑간을 합니다.", "2. 팬에 고기를 볶아 밥과 함께 제공합니다."] },
+                    alternatives: [{ name: "돼지고기 수육", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80" }]
+                }
             },
             "화": {
-                breakfast: { name: "한우 불고기 덮밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "치킨 카레 라이스", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] },
-                lunch: { name: "새우 채소 볶음밥", image: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "간장 계란 비빔밥", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] },
-                snack: { name: "딸기 & 요거트", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "치즈 토스트", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80"}] },
-                dinner: { name: "대구탕 & 애호박 볶음", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "돼지고기 수육 & 백김치", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&q=80"}] }
+                breakfast: { name: "애호박 느타리버섯볶음 & 밥", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" },
+                lunch: { name: "새우 살 야채 전 & 뭇국", image: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=500&q=80" },
+                snack: { name: "고구마 매쉬", image: "https://images.unsplash.com/photo-1596040309792-953329598f44?auto=format&fit=crop&w=500&q=80" },
+                dinner: { name: "대구살 조림 & 시금치나물", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }
             },
-            "수": { breakfast: { name: "전복죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "소고기 야채 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "돼지고기 장조림 & 잡곡밥", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭안심 조림 & 진밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "찐 옥수수", image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "찐 밤", image: "https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "소고기 뭇국 & 시금치나물", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "미역국 & 생선구이", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80"}] } },
-            "목": { breakfast: { name: "프렌치 토스트(무염버터)", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "오트밀 사과 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "닭가슴살 스테이크 & 찐 채소", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "함박 스테이크", image: "https://images.unsplash.com/photo-1529042410759-ad81203b1b19?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "포도", image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "바나나", image: "https://images.unsplash.com/photo-1481349579423-ba96c36e6b9a?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "두부 조림 & 멸치 볶음", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "계란말이 & 콩나물국", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] } },
-            "금": { breakfast: { name: "소고기 미역 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭가슴살 야채죽", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "생선전 & 콩나물국", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "불고기 & 백김치", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "수제 쌀쿠키", image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "우유", image: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "카레 라이스(순한맛)", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "하이라이스", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80"}] } },
-            "토": { breakfast: { name: "바나나 팬케이크", image: "https://images.unsplash.com/photo-1506084868730-3423e9339e05?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "스크램블 에그 & 토스트", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "소고기 감자 볶음 & 잡곡밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "닭다리살 오븐구이", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "치즈 스틱", image: "https://images.unsplash.com/photo-1486297678162-ad2a19b05844?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "요거트 볼", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "연어 구이 & 브로콜리", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "해물 파스타(아기용)", image: "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=300&q=80"}] } },
-            "일": { breakfast: { name: "야채 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "단호박 타락죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80"}] }, lunch: { name: "아기용 짜장밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "오므라이스", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80"}] }, snack: { name: "배", image: "https://images.unsplash.com/photo-1541491008689-b5d3c6615e2e?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "멜론", image: "https://images.unsplash.com/photo-1508317469940-e3df4959cf3f?auto=format&fit=crop&w=300&q=80"}] }, dinner: { name: "소고기 미역국 & 계란찜", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=300&q=80", alternatives: [{name: "된장국 & 두부부침", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=300&q=80"}] } }
+            "수": { breakfast: { name: "프렌치 토스트 & 우유", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "소고기 뭇국 & 잡곡밥", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, snack: { name: "치즈 조각 & 배", image: "https://images.unsplash.com/photo-1486297678162-ad2a19b05844?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "생선전 & 두부 조림", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" } },
+            "목": { breakfast: { name: "전복죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "닭다리살 오븐구이 & 찐 채소", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80" }, snack: { name: "찐 옥수수", image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "된장국 & 계란찜", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80" } },
+            "금": { breakfast: { name: "바나나 팬케이크", image: "https://images.unsplash.com/photo-1506084868730-3423e9339e05?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "함박 스테이크 & 잡곡밥", image: "https://images.unsplash.com/photo-1529042410759-ad81203b1b19?auto=format&fit=crop&w=500&q=80" }, snack: { name: "수제 쌀쿠키", image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "카레 라이스 & 백김치", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" } },
+            "토": { breakfast: { name: "소고기 미역 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "연어 구이 & 브로콜리", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "요거트 볼", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "닭가슴살 간장 조림 & 진밥", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80" } },
+            "일": { breakfast: { name: "오트밀 과일 죽", image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" }, lunch: { name: "아기용 짜장밥", image: "https://images.unsplash.com/photo-1584263347416-85a18a4524e2?auto=format&fit=crop&w=500&q=80" }, snack: { name: "배 & 딸기", image: "https://images.unsplash.com/photo-1541491008689-b5d3c6615e2e?auto=format&fit=crop&w=500&q=80" }, dinner: { name: "소고기 된장국 & 두부부침", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" } }
         }
     }
 };
@@ -97,7 +120,6 @@ class BabyFoodRecommendation extends HTMLElement {
         
         const currentMeal = data.days[this.activeDay][mealType];
         if (currentMeal.alternatives && currentMeal.alternatives.length > 0) {
-            // 현재 표시된 메뉴(shuffledMeals에 있으면 그것, 없으면 원본)와 다른 것을 선택
             const displayedName = this.shuffledMeals[mealType] ? this.shuffledMeals[mealType].name : currentMeal.name;
             const availableOptions = [currentMeal, ...currentMeal.alternatives].filter(m => m.name !== displayedName);
             
@@ -133,38 +155,36 @@ class BabyFoodRecommendation extends HTMLElement {
                 .day-tab { padding: 10px 18px; border-radius: 12px; background: white; border: 1px solid var(--border-color); cursor: pointer; font-weight: bold; transition: 0.3s; white-space: nowrap; }
                 .day-tab.active { background: var(--primary-color); color: white; border-color: var(--primary-color); }
 
-                .meal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-                .meal-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); position: relative; transition: transform 0.3s; }
-                .meal-card:hover { transform: translateY(-5px); }
+                .meal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+                .meal-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); position: relative; transition: transform 0.3s; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+                .meal-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
                 
-                .meal-image { height: 160px; background-size: cover; background-position: center; position: relative; transition: 0.5s; }
-                .meal-image::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.4)); }
-                .meal-type-label { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.9); padding: 4px 10px; border-radius: 8px; font-size: 0.8rem; font-weight: bold; color: var(--primary-color); z-index: 1; }
+                .meal-type-badge { display: inline-block; background: #fff0f0; color: var(--primary-color); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.8rem; width: fit-content; }
                 
-                .meal-info { padding: 1.2rem; }
-                .meal-name { font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; min-height: 2.4rem; }
+                .meal-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; color: #333; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
                 
-                .action-btns { display: flex; gap: 8px; }
-                .btn { padding: 8px 12px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s; }
-                .btn-shuffle { background: #e7f5ff; color: #228be6; white-space: nowrap; flex-shrink: 0; }
-                .btn-shuffle:hover { background: #d0ebff; }
-                .btn-recipe { background: #fff0f0; color: #ff6b6b; width: 100%; margin-top: 10px; }
-                .btn-recipe:hover { background: #ffe3e3; }
+                .btn { padding: 10px 15px; border-radius: 10px; border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 5px; text-decoration: none; }
+                .btn-shuffle { background: #e7f5ff; color: #228be6; font-size: 0.8rem; padding: 6px 10px; }
+                .btn-recipe { background: #f1f3f5; color: #495057; width: 100%; margin-bottom: 8px; }
+                .btn-link { background: #e3faf3; color: #099268; width: 100%; }
                 
-                .recipe-content { display: none; margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--border-color); font-size: 0.9rem; line-height: 1.6; }
+                .recipe-content { display: none; margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 12px; font-size: 0.9rem; line-height: 1.6; }
                 .recipe-active .recipe-content { display: block; }
-                .recipe-active .btn-recipe { background: #ff6b6b; color: white; }
+                .recipe-active .btn-recipe { background: #adb5bd; color: white; }
 
                 .growth-tip { margin-top: 2rem; background: #fff4f4; padding: 1.2rem; border-radius: 15px; border-left: 5px solid var(--primary-color); font-size: 0.95rem; }
                 
-                [data-theme="dark"] .day-tab, [data-theme="dark"] .meal-card { background: #2d2d2d; color: white; }
+                [data-theme="dark"] .day-tab, [data-theme="dark"] .meal-card { background: #2d2d2d; color: white; border-color: #444; }
+                [data-theme="dark"] .meal-name { color: #eee; }
                 [data-theme="dark"] .dashboard { background: #1a1a1a; }
-                [data-theme="dark"] .growth-tip { background: #3d2b2b; }
+                [data-theme="dark"] .recipe-content { background: #383838; color: #ddd; }
+                [data-theme="dark"] .btn-recipe { background: #444; color: #ccc; }
+                [data-theme="dark"] .btn-link { background: #1b2b24; color: #63e6be; }
             </style>
             
             <div class="dashboard">
                 <div class="header">
-                    <div style="font-weight: bold; color: #777;">👶 ${this.age}개월 맞춤 영양 대시보드</div>
+                    <div style="font-weight: bold; color: #777; margin-bottom: 5px;">👶 ${this.age}개월 맞춤 영양 대시보드</div>
                     <h3>${data.title}</h3>
                 </div>
 
@@ -178,21 +198,31 @@ class BabyFoodRecommendation extends HTMLElement {
                         const icon = type === "breakfast" ? "☀️" : type === "lunch" ? "🕛" : type === "snack" ? "🍎" : "🌙";
                         const label = type === "breakfast" ? "아침" : type === "lunch" ? "점심" : type === "snack" ? "간식" : "저녁";
                         const hasAlternatives = (dayData[type].alternatives && dayData[type].alternatives.length > 0);
+                        
+                        // 외부 검색 링크 생성 (네이버 검색 결과)
+                        const searchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(this.age + "개월 " + meal.name + " 레시피")}`;
 
                         return `
                             <div class="meal-card ${type}">
-                                <div class="meal-image" style="background-image: url('${meal.image || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=300&q=80'}')">
-                                    <div class="meal-type-label">${icon} ${label}</div>
-                                </div>
-                                <div class="meal-info">
+                                <div>
+                                    <div class="meal-type-badge">${icon} ${label}</div>
                                     <div class="meal-name">
                                         <span>${meal.name}</span>
                                         ${hasAlternatives ? `<button class="btn btn-shuffle" onclick="this.getRootNode().host.shuffleMeal('${type}')">🔄 셔플</button>` : ''}
                                     </div>
-                                    <button class="btn btn-recipe" onclick="this.getRootNode().host.toggleRecipe('${type}')">📖 레시피 보기</button>
+                                </div>
+                                
+                                <div class="action-buttons">
+                                    <button class="btn btn-recipe" onclick="this.getRootNode().host.toggleRecipe('${type}')">
+                                        <span>📖 간단 요약 레시피</span>
+                                    </button>
+                                    <a href="${searchUrl}" target="_blank" class="btn btn-link">
+                                        <span>🔍 외부 상세 레시피 보기</span>
+                                    </a>
+                                    
                                     <div class="recipe-content">
-                                        <strong>재료:</strong><br> ${meal.recipe ? meal.recipe.ingredients.join(', ') : '준비 중입니다.'}<br><br>
-                                        <strong>조리 순서:</strong><br> ${meal.recipe ? meal.recipe.steps.join('<br>') : '준비 중입니다.'}
+                                        <strong>🥦 주요 재료:</strong><br> ${meal.recipe ? meal.recipe.ingredients.join(', ') : '준비 중입니다.'}<br><br>
+                                        <strong>👨‍🍳 조리 방법:</strong><br> ${meal.recipe ? meal.recipe.steps.join('<br>') : '준비 중입니다.'}
                                     </div>
                                 </div>
                             </div>
