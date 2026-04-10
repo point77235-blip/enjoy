@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>아기 개월별 식단 추천</title>
+    <title>아기 개월별 식단 추천 - 올바른 영양 가이드</title>
+    <meta name="description" content="우리 아기 성장에 꼭 필요한 개월별 맞춤 식단과 영양 정보를 확인하세요. 이유식 시작부터 유아식까지 전문가 권장 식단을 추천해 드립니다.">
     <meta name="google-adsense-account" content="ca-pub-6119898071272915">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6119898071272915"
      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <button id="theme-toggle" class="theme-toggle">다크 모드</button>
-        <h1>아기 개월별 식단 추천</h1>
-        <div class="input-container">
-            <input type="number" id="age-input" placeholder="아기 개월 수를 입력하세요" min="0">
-            <button id="recommend-button">추천 받기</button>
-        </div>
-        <div id="recommendation-container"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">아기식단 가이드</div>
+            <ul class="nav-links">
+                <li><a href="#recommendation">식단 추천</a></li>
+                <li><a href="#about">정보 센터</a></li>
+                <li><a href="#partnership">제휴 문의</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">다크 모드</button>
+        </nav>
+    </header>
 
-        <section class="partnership-section">
+    <main>
+        <section id="recommendation" class="hero-section">
+            <h1>개월별 맞춤 식단 추천</h1>
+            <p>아기의 성장 단계에 맞는 최적의 영양 밸런스를 찾아보세요.</p>
+            <div class="input-container">
+                <input type="number" id="age-input" placeholder="아기 개월 수 (예: 6)" min="0">
+                <button id="recommend-button">추천 받기</button>
+            </div>
+            <div id="recommendation-container"></div>
+        </section>
+
+        <section id="about" class="info-section">
             <hr>
-            <h2>제휴 문의</h2>
+            <h2>개월별 이유식 가이드</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>초기 (4-6개월)</h3>
+                    <p>쌀미음으로 시작하여 알레르기 반응을 살피는 시기입니다. 묽은 농도에서 서서히 익혀주세요.</p>
+                </div>
+                <div class="info-card">
+                    <h3>중기 (7-8개월)</h3>
+                    <p>하루 두 번, 알갱이가 있는 죽 형태로 진행합니다. 단백질 섭취가 중요해지는 시기입니다.</p>
+                </div>
+                <div class="info-card">
+                    <h3>후기 (9-11개월)</h3>
+                    <p>하루 세 번 식사를 시작합니다. 무른 밥 형태로 다양한 식재료를 경험하게 해주세요.</p>
+                </div>
+                <div class="info-card">
+                    <h3>완료기 (12개월 이상)</h3>
+                    <p>유아식으로 넘어가는 단계입니다. 간을 최소화하고 영양 균형을 맞춰주세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="partnership" class="partnership-section">
+            <hr>
+            <h2>제휴 및 문의</h2>
+            <p>콘텐츠 협업이나 광고 문의는 아래 폼을 통해 남겨주세요.</p>
             <form action="https://formspree.io/f/mykbqwej" method="POST" id="partnership-form">
                 <div class="form-group">
                     <label for="email">이메일 주소</label>
@@ -33,30 +72,33 @@
                 </div>
                 <button type="submit" id="submit-button">문의 보내기</button>
             </form>
+        </section>
+
         <section class="comment-section">
             <hr>
-            <h2>댓글</h2>
+            <h2>커뮤니티 의견</h2>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://https-enjoy1-7el-pages-dev.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 아기식단 가이드. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/privacy-policy.html">개인정보처리방침</a></li>
+                <li><a href="#about">사이트 소개</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
